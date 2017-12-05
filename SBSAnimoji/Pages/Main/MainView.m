@@ -35,6 +35,7 @@
     self.backgroundColor = [UIColor whiteColor];
     
     self.puppetView = [[SBSPuppetView alloc] init];
+    self.puppetView.scene.background.contents = [UIColor greenColor];
     self.puppetView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.puppetView];
     
@@ -76,6 +77,7 @@
     self.recordButton = [UIButton buttonWithType:UIButtonTypeSystem];
     self.recordButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.recordButton setImage:[UIImage imageNamed:@"start-recording"] forState:UIControlStateNormal];
+    self.recordButton.hidden = YES;
     [self addSubview:self.recordButton];
     
     self.shareButton = [UIButton buttonWithType:UIButtonTypeSystem];
